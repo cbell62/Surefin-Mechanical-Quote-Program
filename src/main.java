@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
 import java.io.File;
 import java.io.FileInputStream;  
 import java.io.FileNotFoundException;
@@ -12,8 +16,19 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;  
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class main {
+	 
+	    
+	    
 	public String ReadCellData1(int vRow, int vColumn)  
 	{  
 	String value;          //variable for storing the cell value  
@@ -64,6 +79,8 @@ public class main {
 	value=cell.getNumericCellValue();    //getting cell value  
 	return value;               //returns the cell value  
 	}  
+	
+	
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
     	main rc=new main();   //object of the class  
@@ -235,19 +252,25 @@ public class main {
                     }
                 } while (type < 1 || type > 7);
                 if (type == 1) {
+                	
                     //prompts users to enter in fin height
                     System.out.print("Enter Fin Height: ");
                     //declares variable finHeight and is used to input an integer variable 'finheight' from users
                     int finHeight = scan.nextInt();
+                    
+                    
                     //prompts users to enter in fin length
                     System.out.print("Enter Fin Length: ");
                     //declares variable finLength and is used to input an integer variable 'finLength' from users
                     int finLength = scan.nextInt();
+                    
+                    
+            
                     //prompts users to enter in fins per inch
                     System.out.print("Enter Fins Per Inch: ");
                     //declares variable finperInch and is used to input an integer variable 'finperInch' from users
                     int finperInch = scan.nextInt();
-
+                   
                     double finWeight; //declares double variable finWeight
 
                     //sets value of fin weight by taking the fin height times fin length times fins per inch and divides it by 12
@@ -257,6 +280,26 @@ public class main {
                     System.out.print("Enter number of rows: ");
                     //used to input an integer variable 'rowNumber' from users
                     rowNumber = scan.nextInt();
+                  //Read the spreadsheet that needs to be updated
+            		
+                    FileInputStream fis = new FileInputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+            		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+            		XSSFSheet sheet = workbook.getSheetAt(0);
+            		XSSFRow row1 = sheet.getRow(1);
+            		XSSFCell cell1 = row1.getCell(1);
+            		cell1.setCellValue("WA");
+            		XSSFCell cell2 = row1.getCell(2);
+            		cell2.setCellValue(finHeight);
+            		XSSFCell cell3 = row1.getCell(3);
+            		cell3.setCellValue(rowNumber);
+            		XSSFCell cell4 = row1.getCell(4);
+            		cell4.setCellValue(finperInch);
+            		XSSFCell cell6 = row1.getCell(6);
+            		cell6.setCellValue(finLength);          		
+            		fis.close();
+           		FileOutputStream fos =new FileOutputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+           	        workbook.write(fos);
+           	        fos.close(); 
                     //prints out empty line (to make output in terminal look neater)
                     System.out.println();
 
@@ -488,8 +531,7 @@ public class main {
                          finWeight = finWeight * .129;
                          finCost = finWeight * v3Output;
                      }
-                    String strDouble7 = String.format("%.2f", finCost);
-                    System.out.println ("Fin Cost: $" + strDouble7);
+              
                     //prints out the value of Fin Weight
                     System.out.println("Fin Weight: " + finWeight + " pounds");
 
@@ -621,8 +663,7 @@ public class main {
                     {
                      tubingPrice = tubeFeet * r14Output;
                     }
-                    String strDouble5 = String.format("%.2f", tubingPrice);
-					System.out.println("Price of Tubing: $" + strDouble5);
+                   
                     //declares double variable returnBends and sets it equal to 0
                     double returnBends = 0;
 
@@ -638,9 +679,7 @@ public class main {
                     System.out.println("# of Return Bends: " + returnBends);
                     
                     rbendsPrice = (returnBends * r15Output);
-                    String strDouble8 = String.format("%.2f", rbendsPrice);
-                    
-                    System.out.println("Price of Return Bends: $" + strDouble8 );
+                
                     
                     System.out.print("How Many Connections? ");
                     connectionS = scan.nextInt();
@@ -713,108 +752,89 @@ public class main {
                      {
                     	 connectionPrice = connectionS * c1Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 2)
                      {
                     	 connectionPrice = connectionS * c2Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                      }
                      else if (connectionsSelect == 3)
                      {
                     	 connectionPrice = connectionS * c3Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    
                      }
                      else if (connectionsSelect == 4)
                      {
                     	connectionPrice = connectionS * c4Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 5)
                      {
                     	 connectionPrice = connectionS * c5Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 6)
                      {
                     	 connectionPrice = connectionS * c6Output;
-                    	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                  
                    	  
                      }
                      else if (connectionsSelect == 7)
                      {
                     	 connectionPrice = connectionS * c7Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);  
                      }
                     		 else if (connectionsSelect == 8)
                      {
                     			 connectionPrice = connectionS * c8Output;
                             	 
-                            	 String strDouble30 = String.format("%.2f", connectionPrice);
-                            		 System.out.println("Connection Price: $" + strDouble30);
+                            
                  
                      }
                      else if (connectionsSelect == 9)
                      {
                     	 connectionPrice = connectionS * c9Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 10)
                      {
                     	 connectionPrice = connectionS * c10Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                 
                      }
                      else if (connectionsSelect == 11)
                      {
                     	 connectionPrice = connectionS * c11Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    
                      }
                      else if (connectionsSelect == 12)
                      {
                     	 connectionPrice = connectionS * c12Output;
-                    	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                  
                      }
                      else if (connectionsSelect == 13)
                      {
                     	 connectionPrice = connectionS * c13Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 14)
                      {
                     	 connectionPrice = connectionS * c14Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
-                     }
+                    	                     }
                      else if (connectionsSelect == 15)
                      {
                     	 connectionPrice = connectionS * c15Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
            	 
            
@@ -857,21 +877,23 @@ public class main {
                     }
                     else if (fmaterialSelect == 2)
                     {
+                    	
                     	frameCost = frameWeight * f1Output;
+                    	
                     }
                     else if (fmaterialSelect == 3)
                     {
+                    	
                     	frameCost = frameWeight * f2Output;
                     }
 
                     //this declares a string variable called strDouble and formats it as the frame weight rounded to two decimal places
                     String strDouble = String.format("%.2f", frameWeight);
-                    String strDouble3 = String.format("%.2f", frameCost);
+                   
 
                     //this prints out the value of the frame weight
                     System.out.println("Frame Weight: " + strDouble + " pounds");
-                    
-                    System.out.println("Frame Cost: $" + strDouble3);
+      
 
                     //this declares a double variable called solderNum
                     double solderNum;
@@ -879,6 +901,7 @@ public class main {
                     //this sets the value of the number of solders to frameWeight times .138
                     solderNum = frameWeight * .138;
                     
+                        
 
                     do {
                         //this prints out the menu choices for solder material for the user to choose from
@@ -913,12 +936,11 @@ public class main {
 
                     //this declares a string variable called strDouble1 and formats it as the number of solders rounded to two decimal places
                     String strDouble1 = String.format("%.2f", solderNum);
-                    
-                    String strDouble4 = String.format("%.2f", solderCost);
+               
 
                     //this prints out the number of solders
                     System.out.println("Number of Solders: " + strDouble1 + " pounds");
-                    System.out.println ("Cost of Solders: $" + strDouble4);
+            
 
                     //this declares a double variable called vents and sets it equal to 4
                     double vents = 4;
@@ -926,8 +948,7 @@ public class main {
                     //this prints out the number of vents
                     System.out.println("Number of Vents: " + vents);
                     ventsPrice = (vents * s2Output);
-                    String strDouble10 = String.format("%.2f",  ventsPrice);
-                    System.out.println("Vent Cost: $" + strDouble10);
+                   
                     
 
                     //this declares a double variable called headerNum
@@ -950,8 +971,7 @@ public class main {
 
                     discCost = disc * dOuput;
                     
-                    String strDouble12 = String.format("%.2f",  discCost);
-                    System.out.println("Disc Cost: $" + strDouble12);
+                 
                     
 
 
@@ -1029,8 +1049,7 @@ public class main {
                         {
                             headerCost = headers * h7Output;
                         }
-                        String strDouble15 = String.format("%.2f",  headerCost);
-                    System.out.println("Header Cost: $" + strDouble15);
+                
                     
                     System.out.println();
                     System.out.println();
@@ -1067,6 +1086,27 @@ public class main {
                     System.out.print("Enter number of rows: ");
                     //used to input an integer variable 'rowNumber' from users
                     rowNumber = scan.nextInt();
+                    
+//Read the spreadsheet that needs to be updated
+            		
+                    FileInputStream fis = new FileInputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+            		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+            		XSSFSheet sheet = workbook.getSheetAt(0);
+            		XSSFRow row1 = sheet.getRow(1);
+            		XSSFCell cell1 = row1.getCell(1);
+            		cell1.setCellValue("ST");
+            		XSSFCell cell2 = row1.getCell(2);
+            		cell2.setCellValue(finHeight);
+            		XSSFCell cell3 = row1.getCell(3);
+            		cell3.setCellValue(rowNumber);
+            		XSSFCell cell4 = row1.getCell(4);
+            		cell4.setCellValue(finperInch);
+            		XSSFCell cell6 = row1.getCell(6);
+            		cell6.setCellValue(finLength);          		
+            		fis.close();
+           		FileOutputStream fos =new FileOutputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+           	        workbook.write(fos);
+           	        fos.close(); 
                     //prints out empty line (to make output in terminal look neater)
                     System.out.println();
 
@@ -1299,8 +1339,7 @@ public class main {
                          finCost = finWeight * v3Output;
                      }
 
-                    String strDouble7 = String.format("%.2f", finCost);
-                    System.out.println ("Fin Cost: $" + strDouble7);
+                 
 
                     //prints out the value of Fin Weight
                     System.out.println("Fin Weight: " + finWeight + " pounds");
@@ -1432,9 +1471,7 @@ public class main {
                     {
                      tubingPrice = tubeFeet * r14Output;
                     }
-                    String strDouble5 = String.format("%.2f", tubingPrice);
-					System.out.println("Price of Tubing: $" + strDouble5);
-					
+                  
 					 System.out.print("How Many Connections? ");
 	                    connectionS = scan.nextInt();
 	                    do {
@@ -1506,108 +1543,92 @@ public class main {
 	                     {
 	                    	 connectionPrice = connectionS * c1Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                 
 	                     }
 	                     else if (connectionsSelect == 2)
 	                     {
 	                    	 connectionPrice = connectionS * c2Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	
 	                     }
 	                     else if (connectionsSelect == 3)
 	                     {
 	                    	 connectionPrice = connectionS * c3Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
 	                     }
+	                    	
 	                     else if (connectionsSelect == 4)
 	                     {
 	                    	connectionPrice = connectionS * c4Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	
 	                     }
 	                     else if (connectionsSelect == 5)
 	                     {
 	                    	 connectionPrice = connectionS * c5Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+
 	                     }
 	                     else if (connectionsSelect == 6)
 	                     {
 	                    	 connectionPrice = connectionS * c6Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                  
 	                   	  
 	                     }
 	                     else if (connectionsSelect == 7)
 	                     {
 	                    	 connectionPrice = connectionS * c7Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);  
+	                    	 
 	                     }
 	                    		 else if (connectionsSelect == 8)
 	                     {
 	                    			 connectionPrice = connectionS * c8Output;
-	                            	 
-	                            	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                            		 System.out.println("Connection Price: $" + strDouble30);
+	                            
 	                 
 	                     }
 	                     else if (connectionsSelect == 9)
 	                     {
 	                    	 connectionPrice = connectionS * c9Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	 
 	                     }
 	                     else if (connectionsSelect == 10)
 	                     {
 	                    	 connectionPrice = connectionS * c10Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	
 	                     }
 	                     else if (connectionsSelect == 11)
 	                     {
 	                    	 connectionPrice = connectionS * c11Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	
 	                     }
 	                     else if (connectionsSelect == 12)
 	                     {
 	                    	 connectionPrice = connectionS * c12Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	 
 	                     }
 	                     else if (connectionsSelect == 13)
 	                     {
 	                    	 connectionPrice = connectionS * c13Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	
 	                     }
 	                     else if (connectionsSelect == 14)
 	                     {
 	                    	 connectionPrice = connectionS * c14Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    	
 	                     }
 	                     else if (connectionsSelect == 15)
 	                     {
 	                    	 connectionPrice = connectionS * c15Output;
 	                    	 
-	                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-	                    		 System.out.println("Connection Price: $" + strDouble30);
+	                    
 	                     }
 					 //declares double variable frameWeight
                     double frameWeight;
@@ -1657,13 +1678,12 @@ public class main {
 
                     //this declares a string variable called strDouble and formats it as the frame weight rounded to two decimal places
                     String strDouble = String.format("%.2f", frameWeight);
-                    String strDouble3 = String.format("%.2f", frameCost);
+                   
 
                     //this prints out the value of the frame weight
                     System.out.println("Frame Weight: " + strDouble + " pounds");
                     
-                    System.out.println("Frame Cost: $" + strDouble3);
-
+                 
                     //this declares a double variable called solderNum
                     double solderNum;
 
@@ -1705,20 +1725,18 @@ public class main {
                     //this declares a string variable called strDouble1 and formats it as the number of solders rounded to two decimal places
                     String strDouble1 = String.format("%.2f", solderNum);
                     
-                    String strDouble4 = String.format("%.2f", solderCost);
+                    
 
                     //this prints out the number of solders
                     System.out.println("Number of Solders: " + strDouble1 + " pounds");
-                    System.out.println ("Cost of Solders: $" + strDouble4);
-
+                   
                     //this declares a double variable called vents and sets it equal to 4
                     double vents = 4;
 
                     //this prints out the number of vents
                     System.out.println("Number of Vents: " + vents);
                     ventsPrice = (vents * s2Output);
-                    String strDouble10 = String.format("%.2f",  ventsPrice);
-                    System.out.println("Vent Cost: $" + strDouble10);
+                 
 
                     
 
@@ -1742,9 +1760,7 @@ public class main {
 
                     discCost = disc * dOuput;
 
-                    String strDouble12 = String.format("%.2f",  discCost);
-                    System.out.println("Disc Cost: $" + strDouble12);
-
+                   
                     
 
 
@@ -1823,8 +1839,7 @@ public class main {
                             headerCost = headers * h7Output;
                         }
 
-                        String strDouble15 = String.format("%.2f",  headerCost);
-                        System.out.println("Header Cost: $" + strDouble15);
+                       
                         System.out.println();
                         System.out.println();
                         totalPrice = finCost + tubingPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + connectionPrice;
@@ -1861,6 +1876,27 @@ public class main {
                     System.out.print("Enter number of rows: ");
                     //used to input an integer variable 'rowNumber' from users
                     rowNumber = scan.nextInt();
+                    
+//Read the spreadsheet that needs to be updated
+            		
+                    FileInputStream fis = new FileInputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+            		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+            		XSSFSheet sheet = workbook.getSheetAt(0);
+            		XSSFRow row1 = sheet.getRow(1);
+            		XSSFCell cell1 = row1.getCell(1);
+            		cell1.setCellValue("CC");
+            		XSSFCell cell2 = row1.getCell(2);
+            		cell2.setCellValue(finHeight);
+            		XSSFCell cell3 = row1.getCell(3);
+            		cell3.setCellValue(rowNumber);
+            		XSSFCell cell4 = row1.getCell(4);
+            		cell4.setCellValue(finperInch);
+            		XSSFCell cell6 = row1.getCell(6);
+            		cell6.setCellValue(finLength);          		
+            		fis.close();
+           		FileOutputStream fos =new FileOutputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+           	        workbook.write(fos);
+           	        fos.close(); 
                     //prints out empty line (to make output in terminal look neater)
                     System.out.println();
 
@@ -2093,8 +2129,7 @@ public class main {
                          finCost = finWeight * v3Output;
                      }
 
-                    String strDouble7 = String.format("%.2f", finCost);
-                    System.out.println ("Fin Cost: $" + strDouble7);
+                   
                     //prints out the value of Fin Weight
                     System.out.println("Fin Weight: " + finWeight + " pounds");
 
@@ -2226,8 +2261,7 @@ public class main {
                     {
                      tubingPrice = tubeFeet * r14Output;
                     }
-                    String strDouble5 = String.format("%.2f", tubingPrice);
-					System.out.println("Price of Tubing: $" + strDouble5);
+                    
                     //declares double variable returnBends and sets it equal to 0
                     double returnBends = 0;
 
@@ -2243,9 +2277,7 @@ public class main {
                     System.out.println("# of Return Bends: " + returnBends);
                     
                     rbendsPrice = (returnBends * r15Output);
-                    String strDouble8 = String.format("%.2f", rbendsPrice);
-                    
-                    System.out.println("Price of Return Bends: $" + strDouble8 );
+                   
 
                     System.out.print("How Many Connections? ");
                     connectionS = scan.nextInt();
@@ -2318,108 +2350,89 @@ public class main {
                      {
                     	 connectionPrice = connectionS * c1Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 2)
                      {
                     	 connectionPrice = connectionS * c2Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                      }
                      else if (connectionsSelect == 3)
                      {
                     	 connectionPrice = connectionS * c3Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
+                    	
                      }
                      else if (connectionsSelect == 4)
                      {
                     	connectionPrice = connectionS * c4Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 5)
                      {
                     	 connectionPrice = connectionS * c5Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
                      }
                      else if (connectionsSelect == 6)
                      {
                     	 connectionPrice = connectionS * c6Output;
-                    	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                    	  
                      }
                      else if (connectionsSelect == 7)
                      {
                     	 connectionPrice = connectionS * c7Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);  
+                    	
                      }
                     		 else if (connectionsSelect == 8)
                      {
                     			 connectionPrice = connectionS * c8Output;
                             	 
-                            	 String strDouble30 = String.format("%.2f", connectionPrice);
-                            		 System.out.println("Connection Price: $" + strDouble30);
+                            	
                  
                      }
                      else if (connectionsSelect == 9)
                      {
                     	 connectionPrice = connectionS * c9Output;
-                    	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    ;
                      }
                      else if (connectionsSelect == 10)
                      {
                     	 connectionPrice = connectionS * c10Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 11)
                      {
                     	 connectionPrice = connectionS * c11Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                      }
                      else if (connectionsSelect == 12)
                      {
                     	 connectionPrice = connectionS * c12Output;
-                    	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
                      }
+                    	
                      else if (connectionsSelect == 13)
                      {
                     	 connectionPrice = connectionS * c13Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                      }
                      else if (connectionsSelect == 14)
                      {
                     	 connectionPrice = connectionS * c14Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    
                      }
                      else if (connectionsSelect == 15)
                      {
                     	 connectionPrice = connectionS * c15Output;
-                    	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                     //declares double variable frameWeight
                     double frameWeight;
@@ -2469,12 +2482,12 @@ public class main {
 
                     //this declares a string variable called strDouble and formats it as the frame weight rounded to two decimal places
                     String strDouble = String.format("%.2f", frameWeight);
-                    String strDouble3 = String.format("%.2f", frameCost);
+                   
 
                     //this prints out the value of the frame weight
                     System.out.println("Frame Weight: " + strDouble + " pounds");
                     
-                    System.out.println("Frame Cost: $" + strDouble3);
+                   
 
                     //this declares a double variable called solderNum
                     double solderNum;
@@ -2517,11 +2530,11 @@ public class main {
                     //this declares a string variable called strDouble1 and formats it as the number of solders rounded to two decimal places
                     String strDouble1 = String.format("%.2f", solderNum);
                     
-                    String strDouble4 = String.format("%.2f", solderCost);
+                  
 
                     //this prints out the number of solders
                     System.out.println("Number of Solders: " + strDouble1 + " pounds");
-                    System.out.println ("Cost of Solders: $" + strDouble4);
+                   
 
                     //this declares a double variable called vents and sets it equal to 4
                     double vents = 4;
@@ -2530,8 +2543,7 @@ public class main {
                     System.out.println("Number of Vents: " + vents);
                     
                     ventsPrice = (vents * s2Output);
-                    String strDouble10 = String.format("%.2f",  ventsPrice);
-                    System.out.println("Vent Cost: $" + strDouble10);
+                    
 
                     
 
@@ -2555,9 +2567,7 @@ public class main {
 
                     discCost = disc * dOuput;
 
-                    String strDouble12 = String.format("%.2f",  discCost);
-                    System.out.println("Disc Cost: $" + strDouble12);
-
+                
 
 
                     //this prints out the number of discs
@@ -2635,8 +2645,7 @@ public class main {
                             headerCost = headers * h7Output;
                         }
 
-                        String strDouble15 = String.format("%.2f",  headerCost);
-                        System.out.println("Header Cost: $" + strDouble15);
+                   
                     System.out.println();
                     System.out.println();
                     totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + connectionPrice;
@@ -2672,6 +2681,27 @@ public class main {
                     System.out.print("Enter number of rows: ");
                     //used to input an integer variable 'rowNumber' from users
                     rowNumber = scan.nextInt();
+                    
+//Read the spreadsheet that needs to be updated
+            		
+                    FileInputStream fis = new FileInputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+            		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+            		XSSFSheet sheet = workbook.getSheetAt(0);
+            		XSSFRow row1 = sheet.getRow(1);
+            		XSSFCell cell1 = row1.getCell(1);
+            		cell1.setCellValue("DX");
+            		XSSFCell cell2 = row1.getCell(2);
+            		cell2.setCellValue(finHeight);
+            		XSSFCell cell3 = row1.getCell(3);
+            		cell3.setCellValue(rowNumber);
+            		XSSFCell cell4 = row1.getCell(4);
+            		cell4.setCellValue(finperInch);
+            		XSSFCell cell6 = row1.getCell(6);
+            		cell6.setCellValue(finLength);          		
+            		fis.close();
+           		FileOutputStream fos =new FileOutputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+           	        workbook.write(fos);
+           	        fos.close(); 
                     //prints out empty line (to make output in terminal look neater)
                     System.out.println();
 
@@ -2903,8 +2933,7 @@ public class main {
                          finWeight = finWeight * .129;
                          finCost = finWeight * v3Output;
                      }
-                    String strDouble7 = String.format("%.2f", finCost);
-                    System.out.println ("Fin Cost: $" + strDouble7);
+                 
                     //prints out the value of Fin Weight
                     System.out.println("Fin Weight: " + finWeight + " pounds");
 
@@ -3036,8 +3065,7 @@ public class main {
                     {
                      tubingPrice = tubeFeet * r14Output;
                     }
-                    String strDouble5 = String.format("%.2f", tubingPrice);
-					System.out.println("Price of Tubing: $" + strDouble5);
+                    
                     //declares double variable returnBends and sets it equal to 0
                     double returnBends = 0;
 
@@ -3053,9 +3081,7 @@ public class main {
                     System.out.println("# of Return Bends: " + returnBends);
                     
                     rbendsPrice = (returnBends * r15Output);
-                    String strDouble8 = String.format("%.2f", rbendsPrice);
                     
-                    System.out.println("Price of Return Bends: $" + strDouble8 );
 
                     System.out.print("How Many Connections? ");
                     connectionS = scan.nextInt();
@@ -3128,108 +3154,92 @@ public class main {
                      {
                     	 connectionPrice = connectionS * c1Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 2)
                      {
                     	 connectionPrice = connectionS * c2Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 3)
                      {
                     	 connectionPrice = connectionS * c3Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                      }
                      else if (connectionsSelect == 4)
                      {
                     	connectionPrice = connectionS * c4Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 5)
                      {
                     	 connectionPrice = connectionS * c5Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                      }
                      else if (connectionsSelect == 6)
                      {
                     	 connectionPrice = connectionS * c6Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                    	  
                      }
                      else if (connectionsSelect == 7)
                      {
                     	 connectionPrice = connectionS * c7Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);  
+                    	
                      }
                     		 else if (connectionsSelect == 8)
                      {
                     			 connectionPrice = connectionS * c8Output;
                             	 
-                            	 String strDouble30 = String.format("%.2f", connectionPrice);
-                            		 System.out.println("Connection Price: $" + strDouble30);
+                          
                  
                      }
                      else if (connectionsSelect == 9)
                      {
                     	 connectionPrice = connectionS * c9Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 10)
                      {
                     	 connectionPrice = connectionS * c10Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	 
                      }
                      else if (connectionsSelect == 11)
                      {
                     	 connectionPrice = connectionS * c11Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 12)
                      {
                     	 connectionPrice = connectionS * c12Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                      else if (connectionsSelect == 13)
                      {
                     	 connectionPrice = connectionS * c13Output;
-                    	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                   
                      }
                      else if (connectionsSelect == 14)
                      {
                     	 connectionPrice = connectionS * c14Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    
                      }
                      else if (connectionsSelect == 15)
                      {
                     	 connectionPrice = connectionS * c15Output;
                     	 
-                    	 String strDouble30 = String.format("%.2f", connectionPrice);
-                    		 System.out.println("Connection Price: $" + strDouble30);
+                    	
                      }
                     //declares double variable frameWeight
                     double frameWeight;
@@ -3684,10 +3694,7 @@ public class main {
                         	totaldCost = (t1Output * 4) + (length * sz3Output);
                         }
                        
-                        String strDouble21 = String.format("%.2f",  totaldCost);
-                        
-
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
+                     
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
                         String strDouble19 = String.format("%.2f",  totalPrice);
@@ -3878,11 +3885,7 @@ public class main {
                         	totaldCost = (t3Output * 4) + (length * sz3Output);
                         }
                        
-                        
-                        String strDouble21 = String.format("%.2f",  totaldCost);
-                        
-
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
+                       
 
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
@@ -4075,10 +4078,7 @@ public class main {
                         }
                        
                         
-                        String strDouble21 = String.format("%.2f",  totaldCost);
-                        
-
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
+                       
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
                         String strDouble19 = String.format("%.2f",  totalPrice);
@@ -4272,10 +4272,6 @@ public class main {
                         }
                        
                         
-                        String strDouble21 = String.format("%.2f",  totaldCost);
-                        
-
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
 
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
@@ -4471,10 +4467,6 @@ public class main {
                         }
                        
                         
- String strDouble21 = String.format("%.2f",  totaldCost);
-                        
-
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
                         
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
@@ -4668,10 +4660,6 @@ public class main {
                         }
                        
                         
- String strDouble21 = String.format("%.2f",  totaldCost);
-                        
-
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
                         String strDouble19 = String.format("%.2f",  totalPrice);
@@ -4863,10 +4851,6 @@ public class main {
                         }
                        
                         
- String strDouble21 = String.format("%.2f",  totaldCost);
-                        
-
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
                         String strDouble19 = String.format("%.2f",  totalPrice);
@@ -5110,10 +5094,7 @@ public class main {
                         	totaldCost = (t16Output * 4) + (length * sz3Output);
                         }
                         
- String strDouble21 = String.format("%.2f",  totaldCost);
-                        
 
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
                         String strDouble19 = String.format("%.2f",  totalPrice);
@@ -5356,11 +5337,7 @@ public class main {
                         {
                         	totaldCost = (t17Output * 4) + (length * sz3Output);
                         }
-                        
- String strDouble21 = String.format("%.2f",  totaldCost);
-                        
 
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost;
 
                         String strDouble19 = String.format("%.2f",  totalPrice);
@@ -5603,10 +5580,7 @@ public class main {
                         	totaldCost = (t20Output * 4) + (length * sz3Output);
                         }
                         
- String strDouble21 = String.format("%.2f",  totaldCost);
-                        
 
-                        System.out.println("Total Cost of Distributor: $" + strDouble21);
 
                         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + totaldCost + connectionPrice;
 
@@ -7710,7 +7684,7 @@ System.out.print("Enter new price: ");
         
 
 }
-static void steamdistributionCoil()
+static void steamdistributionCoil() throws IOException
 {
 	main rc=new main();   //object of the class  
 	//reading the value of 45th row and 3rd column  
@@ -7861,6 +7835,27 @@ static void steamdistributionCoil()
     System.out.print("Enter number of rows: ");
     //used to input an integer variable 'rowNumber' from users
     rowNumber = scan.nextInt();
+    
+  //Read the spreadsheet that needs to be updated
+	
+    FileInputStream fis = new FileInputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+	XSSFWorkbook workbook = new XSSFWorkbook (fis);
+	XSSFSheet sheet = workbook.getSheetAt(0);
+	XSSFRow row1 = sheet.getRow(1);
+	XSSFCell cell1 = row1.getCell(1);
+	cell1.setCellValue("NF");
+	XSSFCell cell2 = row1.getCell(2);
+	cell2.setCellValue(finHeight);
+	XSSFCell cell3 = row1.getCell(3);
+	cell3.setCellValue(rowNumber);
+	XSSFCell cell4 = row1.getCell(4);
+	cell4.setCellValue(finperInch);
+	XSSFCell cell6 = row1.getCell(6);
+	cell6.setCellValue(finLength);          		
+	fis.close();
+	FileOutputStream fos =new FileOutputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+       workbook.write(fos);
+       fos.close(); 
     //prints out empty line (to make output in terminal look neater)
     System.out.println();
 
@@ -8093,8 +8088,7 @@ static void steamdistributionCoil()
          finCost = finWeight * v3Output;
      }
 
-    String strDouble7 = String.format("%.2f", finCost);
-    System.out.println ("Fin Cost: $" + strDouble7);
+   
 
     //prints out the value of Fin Weight
     System.out.println("Fin Weight: " + finWeight + " pounds");
@@ -8115,7 +8109,7 @@ static void steamdistributionCoil()
     
     
     
-    System.out.println("Cap Cost: $" + capCost);
+
     //calculates feet of tubing by taking the fin length + 4 inches times fin height divided by 1.5
     //times the number of rows and divided by 12. Math.round is to round the answer
     tubeFeet = Math.round(((finLength + 4) * ((finHeight / 1.5) * rowNumber)) / 12);
@@ -8250,8 +8244,7 @@ static void steamdistributionCoil()
     {
      tubingPrice = tubeFeet * r14Output;
     }
-    String strDouble5 = String.format("%.2f", tubingPrice);
-	System.out.println("Price of Outer Tubing: $" + strDouble5);
+    
 
     do {
         //this prints out the menu choices for tubing material for the user to choose from
@@ -8371,9 +8364,7 @@ static void steamdistributionCoil()
     {
      tubingPrice1 = tubeFeet * r14Output;
     }
-    String strDouble6 = String.format("%.2f", tubingPrice1);
-	System.out.println("Price of Inner Tubing: $" + strDouble6);
-	
+  
 	//declares double variable returnBends and sets it equal to 0
     double returnBends = 0;
 
@@ -8389,9 +8380,7 @@ static void steamdistributionCoil()
     System.out.println("# of Return Bends: " + returnBends);
     
     rbendsPrice = (returnBends * r15Output);
-    String strDouble8 = String.format("%.2f", rbendsPrice);
     
-    System.out.println("Price of Return Bends: $" + strDouble8 );
     System.out.print("How Many Connections? ");
     connectionS = scan.nextInt();
     do {
@@ -8463,108 +8452,88 @@ static void steamdistributionCoil()
      {
     	 connectionPrice = connectionS * c1Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+    	
      }
      else if (connectionsSelect == 2)
      {
     	 connectionPrice = connectionS * c2Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+   
      }
      else if (connectionsSelect == 3)
      {
     	 connectionPrice = connectionS * c3Output;
-    	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
      }
+    	 
      else if (connectionsSelect == 4)
      {
     	connectionPrice = connectionS * c4Output;
-    	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+
      }
      else if (connectionsSelect == 5)
      {
     	 connectionPrice = connectionS * c5Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
      }
      else if (connectionsSelect == 6)
      {
     	 connectionPrice = connectionS * c6Output;
-    	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+
    	  
      }
      else if (connectionsSelect == 7)
      {
     	 connectionPrice = connectionS * c7Output;
-    	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);  
+    	
      }
     		 else if (connectionsSelect == 8)
      {
     			 connectionPrice = connectionS * c8Output;
             	 
-            	 String strDouble30 = String.format("%.2f", connectionPrice);
-            		 System.out.println("Connection Price: $" + strDouble30);
+      
  
      }
      else if (connectionsSelect == 9)
      {
     	 connectionPrice = connectionS * c9Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+    	 
      }
      else if (connectionsSelect == 10)
      {
     	 connectionPrice = connectionS * c10Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+    	
      }
      else if (connectionsSelect == 11)
      {
     	 connectionPrice = connectionS * c11Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+    	
      }
      else if (connectionsSelect == 12)
      {
     	 connectionPrice = connectionS * c12Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+
      }
      else if (connectionsSelect == 13)
      {
     	 connectionPrice = connectionS * c13Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+    
      }
      else if (connectionsSelect == 14)
      {
     	 connectionPrice = connectionS * c14Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+    
      }
      else if (connectionsSelect == 15)
      {
     	 connectionPrice = connectionS * c15Output;
     	 
-    	 String strDouble30 = String.format("%.2f", connectionPrice);
-    		 System.out.println("Connection Price: $" + strDouble30);
+    
      }
 
 	 //declares double variable frameWeight
@@ -8615,12 +8584,11 @@ static void steamdistributionCoil()
 
     //this declares a string variable called strDouble and formats it as the frame weight rounded to two decimal places
     String strDouble = String.format("%.2f", frameWeight);
-    String strDouble3 = String.format("%.2f", frameCost);
+
 
     //this prints out the value of the frame weight
     System.out.println("Frame Weight: " + strDouble + " pounds");
     
-    System.out.println("Frame Cost: $" + strDouble3);
 
     //this declares a double variable called solderNum
     double solderNum;
@@ -8663,11 +8631,11 @@ static void steamdistributionCoil()
     //this declares a string variable called strDouble1 and formats it as the number of solders rounded to two decimal places
     String strDouble1 = String.format("%.2f", solderNum);
     
-    String strDouble4 = String.format("%.2f", solderCost);
+ 
 
     //this prints out the number of solders
     System.out.println("Number of Solders: " + strDouble1 + " pounds");
-    System.out.println ("Cost of Solders: $" + strDouble4);
+   
 
     //this declares a double variable called vents and sets it equal to 4
     double vents = 4;
@@ -8676,8 +8644,7 @@ static void steamdistributionCoil()
     System.out.println("Number of Vents: " + vents);
     
     ventsPrice = (vents * s2Output);
-    String strDouble10 = String.format("%.2f",  ventsPrice);
-    System.out.println("Vent Cost: $" + strDouble10);
+
 
     
 
@@ -8701,8 +8668,7 @@ static void steamdistributionCoil()
 
     discCost = disc * dOuput;
 
-    String strDouble12 = String.format("%.2f",  discCost);
-    System.out.println("Disc Cost: $" + strDouble12);
+  
 
     
 
@@ -8782,8 +8748,7 @@ static void steamdistributionCoil()
             headerCost = headers * h7Output;
         }
 
-        String strDouble15 = String.format("%.2f",  headerCost);
-        System.out.println("Header Cost: $" + strDouble15);
+  
     System.out.println();
     System.out.println();
     totalPrice = finCost + tubingPrice + tubingPrice1 + rbendsPrice + frameCost + solderCost + ventsPrice + discCost + headerCost + capCost + connectionPrice;
@@ -8796,7 +8761,8 @@ static void steamdistributionCoil()
     System.out.println("Total Cost: $"+ strDouble35);
     System.out.println();
 }
-	static void boosterCoil()
+
+	static void boosterCoil() throws IOException
 	{
 		main rc=new main();   //object of the class  
     	//reading the value of 45th row and 3rd column  
@@ -8947,6 +8913,27 @@ static void steamdistributionCoil()
         System.out.print("Enter number of rows: ");
         //used to input an integer variable 'rowNumber' from users
         rowNumber = scan.nextInt();
+        
+      //Read the spreadsheet that needs to be updated
+		
+        FileInputStream fis = new FileInputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+		XSSFSheet sheet = workbook.getSheetAt(0);
+		XSSFRow row1 = sheet.getRow(1);
+		XSSFCell cell1 = row1.getCell(1);
+		cell1.setCellValue("BC");
+		XSSFCell cell2 = row1.getCell(2);
+		cell2.setCellValue(finHeight);
+		XSSFCell cell3 = row1.getCell(3);
+		cell3.setCellValue(rowNumber);
+		XSSFCell cell4 = row1.getCell(4);
+		cell4.setCellValue(finperInch);
+		XSSFCell cell6 = row1.getCell(6);
+		cell6.setCellValue(finLength);          		
+		fis.close();
+		FileOutputStream fos =new FileOutputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
+	        workbook.write(fos);
+	        fos.close(); 
         //prints out empty line (to make output in terminal look neater)
         System.out.println();
 
@@ -9179,8 +9166,7 @@ static void steamdistributionCoil()
              finCost = finWeight * v3Output;
          }
 
-        String strDouble7 = String.format("%.2f", finCost);
-        System.out.println ("Fin Cost: $" + strDouble7);
+      
         //prints out the value of Fin Weight
         System.out.println("Fin Weight: " + finWeight + " pounds");
 
@@ -9312,8 +9298,7 @@ static void steamdistributionCoil()
         {
          tubingPrice = tubeFeet * r14Output;
         }
-        String strDouble5 = String.format("%.2f", tubingPrice);
-		System.out.println("Price of Tubing: $" + strDouble5);
+    
         //declares double variable returnBends and sets it equal to 0
         double returnBends = 0;
 
@@ -9329,10 +9314,9 @@ static void steamdistributionCoil()
         System.out.println("# of Return Bends: " + returnBends);
         
         rbendsPrice = (returnBends * r15Output);
-        String strDouble8 = String.format("%.2f", rbendsPrice);
+     
         
-        System.out.println("Price of Return Bends: $" + strDouble8 );
-
+       
         System.out.print("How Many Connections? ");
         connectionS = scan.nextInt();
         do {
@@ -9404,108 +9388,90 @@ static void steamdistributionCoil()
          {
         	 connectionPrice = connectionS * c1Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	 
          }
          else if (connectionsSelect == 2)
          {
         	 connectionPrice = connectionS * c2Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+   
          }
          else if (connectionsSelect == 3)
          {
         	 connectionPrice = connectionS * c3Output;
-        	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
          }
+        	 
+        	
          else if (connectionsSelect == 4)
          {
         	connectionPrice = connectionS * c4Output;
-        	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	
          }
          else if (connectionsSelect == 5)
          {
         	 connectionPrice = connectionS * c5Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	
          }
          else if (connectionsSelect == 6)
          {
         	 connectionPrice = connectionS * c6Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+    
        	  
          }
          else if (connectionsSelect == 7)
          {
         	 connectionPrice = connectionS * c7Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);  
+        
          }
         		 else if (connectionsSelect == 8)
          {
         			 connectionPrice = connectionS * c8Output;
                 	 
-                	 String strDouble30 = String.format("%.2f", connectionPrice);
-                		 System.out.println("Connection Price: $" + strDouble30);
-     
+                	
          }
          else if (connectionsSelect == 9)
          {
         	 connectionPrice = connectionS * c9Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	
          }
          else if (connectionsSelect == 10)
          {
         	 connectionPrice = connectionS * c10Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        
          }
          else if (connectionsSelect == 11)
          {
         	 connectionPrice = connectionS * c11Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
          }
          else if (connectionsSelect == 12)
          {
         	 connectionPrice = connectionS * c12Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	
          }
          else if (connectionsSelect == 13)
          {
         	 connectionPrice = connectionS * c13Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	
          }
          else if (connectionsSelect == 14)
          {
         	 connectionPrice = connectionS * c14Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	
          }
          else if (connectionsSelect == 15)
          {
         	 connectionPrice = connectionS * c15Output;
         	 
-        	 String strDouble30 = String.format("%.2f", connectionPrice);
-        		 System.out.println("Connection Price: $" + strDouble30);
+        	 
          }
         //declares double variable frameWeight
         double frameWeight;
@@ -9555,12 +9521,12 @@ static void steamdistributionCoil()
 
         //this declares a string variable called strDouble and formats it as the frame weight rounded to two decimal places
         String strDouble = String.format("%.2f", frameWeight);
-        String strDouble3 = String.format("%.2f", frameCost);
+        
 
         //this prints out the value of the frame weight
         System.out.println("Frame Weight: " + strDouble + " pounds");
         
-        System.out.println("Frame Cost: $" + strDouble3);
+      
 
         //this declares a double variable called solderNum
         double solderNum;
@@ -9603,11 +9569,11 @@ static void steamdistributionCoil()
         //this declares a string variable called strDouble1 and formats it as the number of solders rounded to two decimal places
         String strDouble1 = String.format("%.2f", solderNum);
         
-        String strDouble4 = String.format("%.2f", solderCost);
+       
 
         //this prints out the number of solders
         System.out.println("Number of Solders: " + strDouble1 + " pounds");
-        System.out.println ("Cost of Solders: $" + strDouble4);
+       
 
         //this declares a double variable called vents and sets it equal to 4
         double vents = 4;
@@ -9616,8 +9582,7 @@ static void steamdistributionCoil()
         System.out.println("Number of Vents: " + vents);
         
         ventsPrice = (vents * s2Output);
-        String strDouble10 = String.format("%.2f",  ventsPrice);
-        System.out.println("Vent Cost: $" + strDouble10);
+      
         System.out.println();
         System.out.println();
         totalPrice = finCost + tubingPrice + rbendsPrice + frameCost + solderCost + ventsPrice + connectionPrice;
@@ -9630,5 +9595,7 @@ static void steamdistributionCoil()
         System.out.println("Total Cost: $"+ strDouble35);
         System.out.println(); 
 	}
+	
+	
 
 }
