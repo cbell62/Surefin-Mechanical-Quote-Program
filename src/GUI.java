@@ -1,3 +1,6 @@
+/* Author: Calista Bell
+    Company: Surefin Mechanical Equipment
+    */
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
