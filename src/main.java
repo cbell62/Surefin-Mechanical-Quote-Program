@@ -30,7 +30,6 @@ public class main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        formCalculations(Frame);
 	}
 
 	public static void formCalculations(GUI inFrame) throws IOException 
@@ -174,8 +173,8 @@ public class main {
                   
                    
                     // used to input value of an integer variable 'type' from user.
-                    System.out.print("Enter type of coil: ");  type=scan.nextInt();
-                  // type = inFrame.type_of_coil_Inp();
+                   // System.out.print("Enter type of coil: ");  type=scan.nextInt();
+                  type = inFrame.type_of_coil_Inp();
                 
                     switch (type) {
                         case 1:
@@ -2719,6 +2718,7 @@ System.out.print("Enter new price: ");
 			         finWeight = finWeight * .129;
 			         finCost = finWeight * v3Output;
 			     }
+			   //  else if (finMaterial == FinMaterial.Alum)
 			
 			    //prints out the value of Fin Weight
 			

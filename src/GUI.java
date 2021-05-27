@@ -18,7 +18,7 @@ import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 
-public class GUI extends JFrame  /*implements ActionListener */ {
+public class GUI extends JFrame  implements ActionListener  {
 
 	//declaring JPanel called contentPane
 	private JPanel contentPane;
@@ -471,7 +471,7 @@ public class GUI extends JFrame  /*implements ActionListener */ {
 				
 				calcButton = new JButton("Calculate");
 				contentPane.add(calcButton, "6, 38");
-			//calcButton.addActionListener(this);
+			    calcButton.addActionListener(this);
 ;			
 				
 				
@@ -536,15 +536,20 @@ public class GUI extends JFrame  /*implements ActionListener */ {
 	public int distributor_amount_Inp() {
 		return distributorAmount.getSelectedIndex() + 1;
 	}
-/*public void actionPerformed(java.awt.event.Actionevent evt)
+public void actionPerformed(ActionEvent evt)
 	{
 		
-		if (evt.getSouce() == calcButton)
+		if (evt.getSource() == calcButton)
 		{
-			main.formCalculations(this);
-		}
+			try {
+				main.formCalculations(this);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
-	*/
+	
+}
 }
 	
 
