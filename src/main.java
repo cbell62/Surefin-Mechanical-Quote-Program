@@ -2594,7 +2594,10 @@ System.out.print("Enter new price: ");
 			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 2) {
 			         finWeight = finWeight * .093;
 			         finCost = finWeight * v9Output;
-			     } else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 3) {
+			     } 
+
+				    //number of rows equaling 3
+			      else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 3) {
 			         finWeight = finWeight * .029;
 			         finCost = finWeight * vOutput;
 			
@@ -2624,7 +2627,10 @@ System.out.print("Enter new price: ");
 			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 3) {
 			         finWeight = finWeight * .140;
 			         finCost = finWeight * v9Output;
-			     } else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 4) {
+			     } 
+			    
+			    //number of rows equaling 4
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 4) {
 			         finWeight = finWeight * .039;
 			         finCost = finWeight * vOutput;
 			
@@ -2654,7 +2660,10 @@ System.out.print("Enter new price: ");
 			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 4) {
 			         finWeight = finWeight * .187;
 			         finCost = finWeight * v9Output;
-			     } else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 5) {
+			     } 
+			     
+			    //number of rows equaling 5
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 5) {
 			         finWeight = finWeight * .049;
 			         finCost = finWeight * vOutput;
 			
@@ -2684,7 +2693,10 @@ System.out.print("Enter new price: ");
 			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 5) {
 			         finWeight = finWeight * .233;
 			         finCost = finWeight * v9Output;
-			     } else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 6) {
+			     } 
+			     
+			  //number of rows equaling 6
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 6) {
 			         finWeight = finWeight * .058;
 			         finCost = finWeight * vOutput;
 			
@@ -2714,11 +2726,227 @@ System.out.print("Enter new price: ");
 			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 6) {
 			         finWeight = finWeight * .280;
 			         finCost = finWeight * v9Output;
+			     } 
+			     
+			  //number of rows equaling 7
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 7) {
+			    	 finWeight = (finWeight * .039) + (finWeight * .029);
+			         finCost = finWeight * vOutput;
+			     }  else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 7) {
+			    	 finWeight = (finWeight * .052) + (finWeight * .039);
+			         finCost = finWeight * v2Output;
+			    } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 7) {
+			    	 finWeight = (finWeight * .065) + (finWeight * .049);
+			         finCost = finWeight * v3Output;
+			    } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 7) {
+			    	 finWeight = (finWeight * .172) + (finWeight * .129);
+			         finCost = finWeight * v4Output;
+			     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 7) {
+			    	 finWeight = (finWeight * .215) + (finWeight * .161);
+			         finCost = finWeight * v5Output;
+			     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 7) {
+			    	 finWeight = (finWeight * .3023) + (finWeight * .2268);
+			         finCost = finWeight * v6Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 7) {
+			    	  finWeight = (finWeight * .112) + (finWeight * .084);
+				      finCost = finWeight * v7Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 7) {
+			    	 finWeight = (finWeight * .149) + (finWeight * .112);
+			         finCost = finWeight * v8Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 7) {
+			    	 finWeight = (finWeight * .187) + (finWeight * .140);
+			         finCost = finWeight * v9Output;
+			         
+			    }
+			      //number of rows equaling 8
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 8)
+			     {
+			    	 finWeight = (finWeight * .039) +  (finWeight * .039);
+			         finCost = finWeight * vOutput;
+			     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 8)
+			     {
+			     finWeight = (finWeight * .052) + (finWeight * .052);
+			         finCost = finWeight * v2Output;
 			     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
 			         finWeight = finWeight * .129;
-			         finCost = finWeight * v3Output;
+			         finCost = finWeight * v3Output; 
+			      
+			     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 8)
+			     {
+			    	 finWeight = (finWeight * .172) + (finWeight * .172);
+			         finCost = finWeight * v4Output;
+			     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 8)
+			     {
+			     finWeight = (finWeight * .215) + (finWeight * .215);
+			         finCost = finWeight * v5Output;
+			     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 8) {
+			         finWeight = (finWeight * .3023) + (finWeight * .3023);
+			         finCost = finWeight * v6Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 8)
+			     {
+			    	  finWeight = (finWeight * .112) + (finWeight * .112);
+			         finCost = finWeight * v7Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 8)
+			     {
+			         finWeight = (finWeight * .149) + (finWeight * .149);
+			         finCost = finWeight * v8Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 8) {
+			         finWeight = (finWeight * .187) + (finWeight * .187);
+			         finCost = finWeight * v9Output;
+
 			     }
-			   //  else if (finMaterial == FinMaterial.Alum)
+			     
+			      //number of rows equaling 9
+			      
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 9)
+			     {
+			    	 finWeight = (finWeight * .039) + (finWeight * .049);
+			         finCost = finWeight * vOutput;
+			     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 9)
+			     {
+			     finWeight = (finWeight * .052) + (finWeight * .065);
+			         finCost = finWeight * v2Output;
+			     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 9) {
+			         
+			      finWeight = (finWeight * .065) + (finWeight * .081);
+			         finCost = finWeight * v3Output;
+			     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 9)
+			     {
+			    	 finWeight = (finWeight * .172) + (finWeight * .215);
+			         finCost = finWeight * v4Output;
+			     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 9)
+			     {
+			     finWeight = (finWeight * .215) + (finWeight * .269);
+			         finCost = finWeight * v5Output;
+			     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 9) {
+			         finWeight = (finWeight * .3023) + (finWeight * .378);
+			         finCost = finWeight * v6Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 9)
+			     {
+			    	  finWeight = (finWeight * .112) + (finWeight * .140);
+			         finCost = finWeight * v7Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 9)
+			     {
+			     finWeight = (finWeight * .149) + (finWeight * .187);
+			         finCost = finWeight * v8Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 9) {
+			         
+			         finWeight = (finWeight * .187) + (finWeight * .233);
+			         finCost = finWeight * v9Output;
+			     }
+			      
+			     //number of rows equaling 10
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 10)
+			     {
+			    	finWeight = (finWeight * .039) + (finWeight * .058);
+			         finCost = finWeight * vOutput; 
+			     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 10)
+			     {
+			     finWeight = (finWeight * .052) + (finWeight * .078);
+			         finCost = finWeight * v2Output;
+			     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 10) {
+			         
+			      finWeight = (finWeight * .065) + (finWeight * .081);
+			         finCost = finWeight * v3Output;
+			     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 10)
+			     {
+			    	 finWeight = (finWeight * .172) + (finWeight * .258);
+			         finCost = finWeight * v4Output;
+			     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 10)
+			     {
+			     finWeight = (finWeight * .215) + (finWeight * .322);
+			         finCost = finWeight * v5Output;
+			     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 10) {
+			      finWeight = (finWeight * .3023) + (finWeight * .4515);
+			         finCost = finWeight * v6Output;   
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 10)
+			     {
+			    	  finWeight = (finWeight * .112) + (finWeight * .168);
+			         finCost = finWeight * v7Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 10)
+			     {
+			     finWeight = (finWeight * .149) + (finWeight * .224);
+			         finCost = finWeight * v8Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 10) {
+			         
+			         finWeight = (finWeight * .187) + (finWeight * .280);
+			         finCost = finWeight * v9Output;
+			     } 
+			     
+			     //number of rows equaling 11
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 11)
+			     {
+			    	 finWeight = (finWeight * .039) + ((finWeight * .039) + (finWeight * .029));
+			         finCost = finWeight * vOutput;
+			     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 11)
+			     {
+			         finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .039));
+			         finCost = finWeight * v2Output;
+			     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 11) {
+			         finWeight = (finWeight * .065) + ((finWeight * .065) + (finWeight * .049));
+			         finCost = finWeight * v3Output;
+			      
+			     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 11)
+			     {
+			    	 finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .129));
+			         finCost = finWeight * v4Output;
+			     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 11)
+			     {
+			         finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .161));
+			         finCost = finWeight * v5Output;
+			     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 11) {
+			         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .2268));
+			         finCost = finWeight * v6Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 11)
+			     {
+			    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .084));
+			         finCost = finWeight * v7Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 11)
+			     {
+			     finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .112));
+			         finCost = finWeight * v8Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 11) {
+			         finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .140));
+			         finCost = finWeight * v9Output;
+			     }
+			     //number of rows equaling 12
+			     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 12)
+			     {
+			    	 finWeight = (finWeight * .039) + ((finWeight * .039) +  finWeight * .039);
+			         finCost = finWeight * vOutput;
+			     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 12)
+			     {
+			     finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .052));
+			         finCost = finWeight * v2Output;
+			     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 12) {
+			         
+			      finWeight = (finWeight * .065) + (finWeight * .129);
+			         finCost = finWeight * v3Output;
+			     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 12)
+			     {
+			    	finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .172));
+			         finCost = finWeight * v4Output;
+			     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 12)
+			     {
+			     finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .215));
+			         finCost = finWeight * v5Output;
+			     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 12) {
+			         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .3023));
+			         finCost = finWeight * v6Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 12)
+			     {
+			    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .112));
+			         finCost = finWeight * v7Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 12)
+			     {
+			       finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .149));
+			         finCost = finWeight * v8Output;
+			     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 12) {
+			        finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .187));
+			         finCost = finWeight * v9Output; 
+			         
+			     } 
+			     
 			
 			    //prints out the value of Fin Weight
 			
@@ -3282,8 +3510,9 @@ System.out.print("Enter new price: ");
 				FileOutputStream fos =new FileOutputStream("C:\\Users\\C Bell\\Desktop\\print.xlsx");
 			       workbook.write(fos);
 			       fos.close(); 
-			    System.out.println(); 
-			}
+			    System.out.println();
+			     } 
+
 			
 	public static void steamCoil (GUI inFrame) throws IOException 
 			{
@@ -3657,10 +3886,225 @@ System.out.print("Enter new price: ");
 					 } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 6) {
 					     finWeight = finWeight * .280;
 					     finCost = finWeight * v9Output;
-					 } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
-					     finWeight = finWeight * .129;
-					     finCost = finWeight * v3Output;
 					 }
+					   //number of rows equaling 7
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 7) {
+					    	 finWeight = (finWeight * .039) + (finWeight * .029);
+					         finCost = finWeight * vOutput;
+					     }  else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 7) {
+					    	 finWeight = (finWeight * .052) + (finWeight * .039);
+					         finCost = finWeight * v2Output;
+					    } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 7) {
+					    	 finWeight = (finWeight * .065) + (finWeight * .049);
+					         finCost = finWeight * v3Output;
+					    } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 7) {
+					    	 finWeight = (finWeight * .172) + (finWeight * .129);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 7) {
+					    	 finWeight = (finWeight * .215) + (finWeight * .161);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 7) {
+					    	 finWeight = (finWeight * .3023) + (finWeight * .2268);
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 7) {
+					    	  finWeight = (finWeight * .112) + (finWeight * .084);
+						      finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 7) {
+					    	 finWeight = (finWeight * .149) + (finWeight * .112);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 7) {
+					    	 finWeight = (finWeight * .187) + (finWeight * .140);
+					         finCost = finWeight * v9Output;
+					         
+					    }
+					      //number of rows equaling 8
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 8)
+					     {
+					    	 finWeight = (finWeight * .039) +  (finWeight * .039);
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 8)
+					     {
+					     finWeight = (finWeight * .052) + (finWeight * .052);
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
+					         finWeight = finWeight * .129;
+					         finCost = finWeight * v3Output; 
+					      
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 8)
+					     {
+					    	 finWeight = (finWeight * .172) + (finWeight * .172);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 8)
+					     {
+					     finWeight = (finWeight * .215) + (finWeight * .215);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 8) {
+					         finWeight = (finWeight * .3023) + (finWeight * .3023);
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 8)
+					     {
+					    	  finWeight = (finWeight * .112) + (finWeight * .112);
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 8)
+					     {
+					         finWeight = (finWeight * .149) + (finWeight * .149);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 8) {
+					         finWeight = (finWeight * .187) + (finWeight * .187);
+					         finCost = finWeight * v9Output;
+
+					     }
+					     
+					      //number of rows equaling 9
+					      
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 9)
+					     {
+					    	 finWeight = (finWeight * .039) + (finWeight * .049);
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 9)
+					     {
+					     finWeight = (finWeight * .052) + (finWeight * .065);
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 9) {
+					         
+					      finWeight = (finWeight * .065) + (finWeight * .081);
+					         finCost = finWeight * v3Output;
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 9)
+					     {
+					    	 finWeight = (finWeight * .172) + (finWeight * .215);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 9)
+					     {
+					     finWeight = (finWeight * .215) + (finWeight * .269);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 9) {
+					         finWeight = (finWeight * .3023) + (finWeight * .378);
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 9)
+					     {
+					    	  finWeight = (finWeight * .112) + (finWeight * .140);
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 9)
+					     {
+					     finWeight = (finWeight * .149) + (finWeight * .187);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 9) {
+					         
+					         finWeight = (finWeight * .187) + (finWeight * .233);
+					         finCost = finWeight * v9Output;
+					     }
+					      
+					     //number of rows equaling 10
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 10)
+					     {
+					    	finWeight = (finWeight * .039) + (finWeight * .058);
+					         finCost = finWeight * vOutput; 
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 10)
+					     {
+					     finWeight = (finWeight * .052) + (finWeight * .078);
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 10) {
+					         
+					      finWeight = (finWeight * .065) + (finWeight * .081);
+					         finCost = finWeight * v3Output;
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 10)
+					     {
+					    	 finWeight = (finWeight * .172) + (finWeight * .258);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 10)
+					     {
+					     finWeight = (finWeight * .215) + (finWeight * .322);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 10) {
+					      finWeight = (finWeight * .3023) + (finWeight * .4515);
+					         finCost = finWeight * v6Output;   
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 10)
+					     {
+					    	  finWeight = (finWeight * .112) + (finWeight * .168);
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 10)
+					     {
+					     finWeight = (finWeight * .149) + (finWeight * .224);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 10) {
+					         
+					         finWeight = (finWeight * .187) + (finWeight * .280);
+					         finCost = finWeight * v9Output;
+					     } 
+					     
+					     //number of rows equaling 11
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 11)
+					     {
+					    	 finWeight = (finWeight * .039) + ((finWeight * .039) + (finWeight * .029));
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 11)
+					     {
+					         finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .039));
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 11) {
+					         finWeight = (finWeight * .065) + ((finWeight * .065) + (finWeight * .049));
+					         finCost = finWeight * v3Output;
+					      
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 11)
+					     {
+					    	 finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .129));
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 11)
+					     {
+					         finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .161));
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 11) {
+					         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .2268));
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 11)
+					     {
+					    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .084));
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 11)
+					     {
+					     finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .112));
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 11) {
+					         finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .140));
+					         finCost = finWeight * v9Output;
+					     }
+					     //number of rows equaling 12
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 12)
+					     {
+					    	 finWeight = (finWeight * .039) + ((finWeight * .039) +  finWeight * .039);
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 12)
+					     {
+					     finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .052));
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 12) {
+					         
+					      finWeight = (finWeight * .065) + (finWeight * .129);
+					         finCost = finWeight * v3Output;
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 12)
+					     {
+					    	finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .172));
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 12)
+					     {
+					     finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .215));
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 12) {
+					         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .3023));
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 12)
+					     {
+					    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .112));
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 12)
+					     {
+					       finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .149));
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 12) {
+					        finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .187));
+					         finCost = finWeight * v9Output; 
+					         
+					     } 
 					
 					
 					
@@ -4572,11 +5016,226 @@ System.out.print("Enter new price: ");
 			             } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 6) {
 			                 finWeight = finWeight * .280;
 			                 finCost = finWeight * v9Output;
-			             } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
-			                 finWeight = finWeight * .129;
-			                 finCost = finWeight * v3Output;
-			             }
-			         
+			             } 
+			            
+			          //number of rows equaling 7
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 7) {
+					    	 finWeight = (finWeight * .039) + (finWeight * .029);
+					         finCost = finWeight * vOutput;
+					     }  else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 7) {
+					    	 finWeight = (finWeight * .052) + (finWeight * .039);
+					         finCost = finWeight * v2Output;
+					    } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 7) {
+					    	 finWeight = (finWeight * .065) + (finWeight * .049);
+					         finCost = finWeight * v3Output;
+					    } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 7) {
+					    	 finWeight = (finWeight * .172) + (finWeight * .129);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 7) {
+					    	 finWeight = (finWeight * .215) + (finWeight * .161);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 7) {
+					    	 finWeight = (finWeight * .3023) + (finWeight * .2268);
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 7) {
+					    	  finWeight = (finWeight * .112) + (finWeight * .084);
+						      finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 7) {
+					    	 finWeight = (finWeight * .149) + (finWeight * .112);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 7) {
+					    	 finWeight = (finWeight * .187) + (finWeight * .140);
+					         finCost = finWeight * v9Output;
+					         
+					    }
+					      //number of rows equaling 8
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 8)
+					     {
+					    	 finWeight = (finWeight * .039) +  (finWeight * .039);
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 8)
+					     {
+					     finWeight = (finWeight * .052) + (finWeight * .052);
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
+					         finWeight = finWeight * .129;
+					         finCost = finWeight * v3Output; 
+					      
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 8)
+					     {
+					    	 finWeight = (finWeight * .172) + (finWeight * .172);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 8)
+					     {
+					     finWeight = (finWeight * .215) + (finWeight * .215);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 8) {
+					         finWeight = (finWeight * .3023) + (finWeight * .3023);
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 8)
+					     {
+					    	  finWeight = (finWeight * .112) + (finWeight * .112);
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 8)
+					     {
+					         finWeight = (finWeight * .149) + (finWeight * .149);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 8) {
+					         finWeight = (finWeight * .187) + (finWeight * .187);
+					         finCost = finWeight * v9Output;
+
+					     }
+					     
+					      //number of rows equaling 9
+					      
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 9)
+					     {
+					    	 finWeight = (finWeight * .039) + (finWeight * .049);
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 9)
+					     {
+					     finWeight = (finWeight * .052) + (finWeight * .065);
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 9) {
+					         
+					      finWeight = (finWeight * .065) + (finWeight * .081);
+					         finCost = finWeight * v3Output;
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 9)
+					     {
+					    	 finWeight = (finWeight * .172) + (finWeight * .215);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 9)
+					     {
+					     finWeight = (finWeight * .215) + (finWeight * .269);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 9) {
+					         finWeight = (finWeight * .3023) + (finWeight * .378);
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 9)
+					     {
+					    	  finWeight = (finWeight * .112) + (finWeight * .140);
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 9)
+					     {
+					     finWeight = (finWeight * .149) + (finWeight * .187);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 9) {
+					         
+					         finWeight = (finWeight * .187) + (finWeight * .233);
+					         finCost = finWeight * v9Output;
+					     }
+					      
+					     //number of rows equaling 10
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 10)
+					     {
+					    	finWeight = (finWeight * .039) + (finWeight * .058);
+					         finCost = finWeight * vOutput; 
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 10)
+					     {
+					     finWeight = (finWeight * .052) + (finWeight * .078);
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 10) {
+					         
+					      finWeight = (finWeight * .065) + (finWeight * .081);
+					         finCost = finWeight * v3Output;
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 10)
+					     {
+					    	 finWeight = (finWeight * .172) + (finWeight * .258);
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 10)
+					     {
+					     finWeight = (finWeight * .215) + (finWeight * .322);
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 10) {
+					      finWeight = (finWeight * .3023) + (finWeight * .4515);
+					         finCost = finWeight * v6Output;   
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 10)
+					     {
+					    	  finWeight = (finWeight * .112) + (finWeight * .168);
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 10)
+					     {
+					     finWeight = (finWeight * .149) + (finWeight * .224);
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 10) {
+					         
+					         finWeight = (finWeight * .187) + (finWeight * .280);
+					         finCost = finWeight * v9Output;
+					     } 
+					     
+					     //number of rows equaling 11
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 11)
+					     {
+					    	 finWeight = (finWeight * .039) + ((finWeight * .039) + (finWeight * .029));
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 11)
+					     {
+					         finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .039));
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 11) {
+					         finWeight = (finWeight * .065) + ((finWeight * .065) + (finWeight * .049));
+					         finCost = finWeight * v3Output;
+					      
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 11)
+					     {
+					    	 finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .129));
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 11)
+					     {
+					         finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .161));
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 11) {
+					         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .2268));
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 11)
+					     {
+					    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .084));
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 11)
+					     {
+					     finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .112));
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 11) {
+					         finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .140));
+					         finCost = finWeight * v9Output;
+					     }
+					     //number of rows equaling 12
+					     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 12)
+					     {
+					    	 finWeight = (finWeight * .039) + ((finWeight * .039) +  finWeight * .039);
+					         finCost = finWeight * vOutput;
+					     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 12)
+					     {
+					     finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .052));
+					         finCost = finWeight * v2Output;
+					     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 12) {
+					         
+					      finWeight = (finWeight * .065) + (finWeight * .129);
+					         finCost = finWeight * v3Output;
+					     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 12)
+					     {
+					    	finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .172));
+					         finCost = finWeight * v4Output;
+					     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 12)
+					     {
+					     finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .215));
+					         finCost = finWeight * v5Output;
+					     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 12) {
+					         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .3023));
+					         finCost = finWeight * v6Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 12)
+					     {
+					    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .112));
+					         finCost = finWeight * v7Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 12)
+					     {
+					       finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .149));
+					         finCost = finWeight * v8Output;
+					     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 12) {
+					        finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .187));
+					         finCost = finWeight * v9Output; 
+					         
+					     } 
 			            //prints out the value of Fin Weight
 			
 			            GUI.finWeight.setText(finWeight + "");
@@ -7600,10 +8259,225 @@ System.out.print("Enter new price: ");
 			         } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 6) {
 			             finWeight = finWeight * .280;
 			             finCost = finWeight * v9Output;
-			         } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
-			             finWeight = finWeight * .129;
-			             finCost = finWeight * v3Output;
-			         }
+			         } 
+			      //number of rows equaling 7
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 7) {
+				    	 finWeight = (finWeight * .039) + (finWeight * .029);
+				         finCost = finWeight * vOutput;
+				     }  else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 7) {
+				    	 finWeight = (finWeight * .052) + (finWeight * .039);
+				         finCost = finWeight * v2Output;
+				    } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 7) {
+				    	 finWeight = (finWeight * .065) + (finWeight * .049);
+				         finCost = finWeight * v3Output;
+				    } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 7) {
+				    	 finWeight = (finWeight * .172) + (finWeight * .129);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 7) {
+				    	 finWeight = (finWeight * .215) + (finWeight * .161);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 7) {
+				    	 finWeight = (finWeight * .3023) + (finWeight * .2268);
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 7) {
+				    	  finWeight = (finWeight * .112) + (finWeight * .084);
+					      finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 7) {
+				    	 finWeight = (finWeight * .149) + (finWeight * .112);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 7) {
+				    	 finWeight = (finWeight * .187) + (finWeight * .140);
+				         finCost = finWeight * v9Output;
+				         
+				    }
+				      //number of rows equaling 8
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 8)
+				     {
+				    	 finWeight = (finWeight * .039) +  (finWeight * .039);
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 8)
+				     {
+				     finWeight = (finWeight * .052) + (finWeight * .052);
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
+				         finWeight = finWeight * .129;
+				         finCost = finWeight * v3Output; 
+				      
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 8)
+				     {
+				    	 finWeight = (finWeight * .172) + (finWeight * .172);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 8)
+				     {
+				     finWeight = (finWeight * .215) + (finWeight * .215);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 8) {
+				         finWeight = (finWeight * .3023) + (finWeight * .3023);
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 8)
+				     {
+				    	  finWeight = (finWeight * .112) + (finWeight * .112);
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 8)
+				     {
+				         finWeight = (finWeight * .149) + (finWeight * .149);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 8) {
+				         finWeight = (finWeight * .187) + (finWeight * .187);
+				         finCost = finWeight * v9Output;
+
+				     }
+				     
+				      //number of rows equaling 9
+				      
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 9)
+				     {
+				    	 finWeight = (finWeight * .039) + (finWeight * .049);
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 9)
+				     {
+				     finWeight = (finWeight * .052) + (finWeight * .065);
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 9) {
+				         
+				      finWeight = (finWeight * .065) + (finWeight * .081);
+				         finCost = finWeight * v3Output;
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 9)
+				     {
+				    	 finWeight = (finWeight * .172) + (finWeight * .215);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 9)
+				     {
+				     finWeight = (finWeight * .215) + (finWeight * .269);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 9) {
+				         finWeight = (finWeight * .3023) + (finWeight * .378);
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 9)
+				     {
+				    	  finWeight = (finWeight * .112) + (finWeight * .140);
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 9)
+				     {
+				     finWeight = (finWeight * .149) + (finWeight * .187);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 9) {
+				         
+				         finWeight = (finWeight * .187) + (finWeight * .233);
+				         finCost = finWeight * v9Output;
+				     }
+				      
+				     //number of rows equaling 10
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 10)
+				     {
+				    	finWeight = (finWeight * .039) + (finWeight * .058);
+				         finCost = finWeight * vOutput; 
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 10)
+				     {
+				     finWeight = (finWeight * .052) + (finWeight * .078);
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 10) {
+				         
+				      finWeight = (finWeight * .065) + (finWeight * .081);
+				         finCost = finWeight * v3Output;
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 10)
+				     {
+				    	 finWeight = (finWeight * .172) + (finWeight * .258);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 10)
+				     {
+				     finWeight = (finWeight * .215) + (finWeight * .322);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 10) {
+				      finWeight = (finWeight * .3023) + (finWeight * .4515);
+				         finCost = finWeight * v6Output;   
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 10)
+				     {
+				    	  finWeight = (finWeight * .112) + (finWeight * .168);
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 10)
+				     {
+				     finWeight = (finWeight * .149) + (finWeight * .224);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 10) {
+				         
+				         finWeight = (finWeight * .187) + (finWeight * .280);
+				         finCost = finWeight * v9Output;
+				     } 
+				     
+				     //number of rows equaling 11
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 11)
+				     {
+				    	 finWeight = (finWeight * .039) + ((finWeight * .039) + (finWeight * .029));
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 11)
+				     {
+				         finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .039));
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 11) {
+				         finWeight = (finWeight * .065) + ((finWeight * .065) + (finWeight * .049));
+				         finCost = finWeight * v3Output;
+				      
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 11)
+				     {
+				    	 finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .129));
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 11)
+				     {
+				         finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .161));
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 11) {
+				         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .2268));
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 11)
+				     {
+				    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .084));
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 11)
+				     {
+				     finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .112));
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 11) {
+				         finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .140));
+				         finCost = finWeight * v9Output;
+				     }
+				     //number of rows equaling 12
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 12)
+				     {
+				    	 finWeight = (finWeight * .039) + ((finWeight * .039) +  finWeight * .039);
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 12)
+				     {
+				     finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .052));
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 12) {
+				         
+				      finWeight = (finWeight * .065) + (finWeight * .129);
+				         finCost = finWeight * v3Output;
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 12)
+				     {
+				    	finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .172));
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 12)
+				     {
+				     finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .215));
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 12) {
+				         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .3023));
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 12)
+				     {
+				    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .112));
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 12)
+				     {
+				       finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .149));
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 12) {
+				        finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .187));
+				         finCost = finWeight * v9Output; 
+				         
+				     } 
 			
 			       
 			        //prints out the value of Fin Weight
@@ -8533,10 +9407,225 @@ System.out.print("Enter new price: ");
 				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 6) {
 				         finWeight = finWeight * .280;
 				         finCost = finWeight * v9Output;
+				     } 
+				  //number of rows equaling 7
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 7) {
+				    	 finWeight = (finWeight * .039) + (finWeight * .029);
+				         finCost = finWeight * vOutput;
+				     }  else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 7) {
+				    	 finWeight = (finWeight * .052) + (finWeight * .039);
+				         finCost = finWeight * v2Output;
+				    } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 7) {
+				    	 finWeight = (finWeight * .065) + (finWeight * .049);
+				         finCost = finWeight * v3Output;
+				    } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 7) {
+				    	 finWeight = (finWeight * .172) + (finWeight * .129);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 7) {
+				    	 finWeight = (finWeight * .215) + (finWeight * .161);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 7) {
+				    	 finWeight = (finWeight * .3023) + (finWeight * .2268);
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 7) {
+				    	  finWeight = (finWeight * .112) + (finWeight * .084);
+					      finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 7) {
+				    	 finWeight = (finWeight * .149) + (finWeight * .112);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 7) {
+				    	 finWeight = (finWeight * .187) + (finWeight * .140);
+				         finCost = finWeight * v9Output;
+				         
+				    }
+				      //number of rows equaling 8
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 8)
+				     {
+				    	 finWeight = (finWeight * .039) +  (finWeight * .039);
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 8)
+				     {
+				     finWeight = (finWeight * .052) + (finWeight * .052);
+				         finCost = finWeight * v2Output;
 				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
 				         finWeight = finWeight * .129;
-				         finCost = finWeight * v3Output;
+				         finCost = finWeight * v3Output; 
+				      
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 8)
+				     {
+				    	 finWeight = (finWeight * .172) + (finWeight * .172);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 8)
+				     {
+				     finWeight = (finWeight * .215) + (finWeight * .215);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 8) {
+				         finWeight = (finWeight * .3023) + (finWeight * .3023);
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 8)
+				     {
+				    	  finWeight = (finWeight * .112) + (finWeight * .112);
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 8)
+				     {
+				         finWeight = (finWeight * .149) + (finWeight * .149);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 8) {
+				         finWeight = (finWeight * .187) + (finWeight * .187);
+				         finCost = finWeight * v9Output;
+
 				     }
+				     
+				      //number of rows equaling 9
+				      
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 9)
+				     {
+				    	 finWeight = (finWeight * .039) + (finWeight * .049);
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 9)
+				     {
+				     finWeight = (finWeight * .052) + (finWeight * .065);
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 9) {
+				         
+				      finWeight = (finWeight * .065) + (finWeight * .081);
+				         finCost = finWeight * v3Output;
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 9)
+				     {
+				    	 finWeight = (finWeight * .172) + (finWeight * .215);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 9)
+				     {
+				     finWeight = (finWeight * .215) + (finWeight * .269);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 9) {
+				         finWeight = (finWeight * .3023) + (finWeight * .378);
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 9)
+				     {
+				    	  finWeight = (finWeight * .112) + (finWeight * .140);
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 9)
+				     {
+				     finWeight = (finWeight * .149) + (finWeight * .187);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 9) {
+				         
+				         finWeight = (finWeight * .187) + (finWeight * .233);
+				         finCost = finWeight * v9Output;
+				     }
+				      
+				     //number of rows equaling 10
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 10)
+				     {
+				    	finWeight = (finWeight * .039) + (finWeight * .058);
+				         finCost = finWeight * vOutput; 
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 10)
+				     {
+				     finWeight = (finWeight * .052) + (finWeight * .078);
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 10) {
+				         
+				      finWeight = (finWeight * .065) + (finWeight * .081);
+				         finCost = finWeight * v3Output;
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 10)
+				     {
+				    	 finWeight = (finWeight * .172) + (finWeight * .258);
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 10)
+				     {
+				     finWeight = (finWeight * .215) + (finWeight * .322);
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 10) {
+				      finWeight = (finWeight * .3023) + (finWeight * .4515);
+				         finCost = finWeight * v6Output;   
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 10)
+				     {
+				    	  finWeight = (finWeight * .112) + (finWeight * .168);
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 10)
+				     {
+				     finWeight = (finWeight * .149) + (finWeight * .224);
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 10) {
+				         
+				         finWeight = (finWeight * .187) + (finWeight * .280);
+				         finCost = finWeight * v9Output;
+				     } 
+				     
+				     //number of rows equaling 11
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 11)
+				     {
+				    	 finWeight = (finWeight * .039) + ((finWeight * .039) + (finWeight * .029));
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 11)
+				     {
+				         finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .039));
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 11) {
+				         finWeight = (finWeight * .065) + ((finWeight * .065) + (finWeight * .049));
+				         finCost = finWeight * v3Output;
+				      
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 11)
+				     {
+				    	 finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .129));
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 11)
+				     {
+				         finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .161));
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 11) {
+				         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .2268));
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 11)
+				     {
+				    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .084));
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 11)
+				     {
+				     finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .112));
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 11) {
+				         finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .140));
+				         finCost = finWeight * v9Output;
+				     }
+				     //number of rows equaling 12
+				     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 12)
+				     {
+				    	 finWeight = (finWeight * .039) + ((finWeight * .039) +  finWeight * .039);
+				         finCost = finWeight * vOutput;
+				     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 12)
+				     {
+				     finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .052));
+				         finCost = finWeight * v2Output;
+				     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 12) {
+				         
+				      finWeight = (finWeight * .065) + (finWeight * .129);
+				         finCost = finWeight * v3Output;
+				     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 12)
+				     {
+				    	finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .172));
+				         finCost = finWeight * v4Output;
+				     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 12)
+				     {
+				     finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .215));
+				         finCost = finWeight * v5Output;
+				     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 12) {
+				         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .3023));
+				         finCost = finWeight * v6Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 12)
+				     {
+				    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .112));
+				         finCost = finWeight * v7Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 12)
+				     {
+				       finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .149));
+				         finCost = finWeight * v8Output;
+				     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 12) {
+				        finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .187));
+				         finCost = finWeight * v9Output; 
+				         
+				     } 
 				
 				   
 				
@@ -9604,11 +10693,225 @@ System.out.print("Enter new price: ");
          } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 6) {
              finWeight = finWeight * .280;
              finCost = finWeight * v9Output;
-         } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
-             finWeight = finWeight * .129;
-             finCost = finWeight * v3Output;
-         }
+         } 
+      //number of rows equaling 7
+	     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 7) {
+	    	 finWeight = (finWeight * .039) + (finWeight * .029);
+	         finCost = finWeight * vOutput;
+	     }  else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 7) {
+	    	 finWeight = (finWeight * .052) + (finWeight * .039);
+	         finCost = finWeight * v2Output;
+	    } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 7) {
+	    	 finWeight = (finWeight * .065) + (finWeight * .049);
+	         finCost = finWeight * v3Output;
+	    } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 7) {
+	    	 finWeight = (finWeight * .172) + (finWeight * .129);
+	         finCost = finWeight * v4Output;
+	     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 7) {
+	    	 finWeight = (finWeight * .215) + (finWeight * .161);
+	         finCost = finWeight * v5Output;
+	     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 7) {
+	    	 finWeight = (finWeight * .3023) + (finWeight * .2268);
+	         finCost = finWeight * v6Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 7) {
+	    	  finWeight = (finWeight * .112) + (finWeight * .084);
+		      finCost = finWeight * v7Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 7) {
+	    	 finWeight = (finWeight * .149) + (finWeight * .112);
+	         finCost = finWeight * v8Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 7) {
+	    	 finWeight = (finWeight * .187) + (finWeight * .140);
+	         finCost = finWeight * v9Output;
+	         
+	    }
+	      //number of rows equaling 8
+	     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 8)
+	     {
+	    	 finWeight = (finWeight * .039) +  (finWeight * .039);
+	         finCost = finWeight * vOutput;
+	     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 8)
+	     {
+	     finWeight = (finWeight * .052) + (finWeight * .052);
+	         finCost = finWeight * v2Output;
+	     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 8) {
+	         finWeight = finWeight * .129;
+	         finCost = finWeight * v3Output; 
+	      
+	     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 8)
+	     {
+	    	 finWeight = (finWeight * .172) + (finWeight * .172);
+	         finCost = finWeight * v4Output;
+	     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 8)
+	     {
+	     finWeight = (finWeight * .215) + (finWeight * .215);
+	         finCost = finWeight * v5Output;
+	     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 8) {
+	         finWeight = (finWeight * .3023) + (finWeight * .3023);
+	         finCost = finWeight * v6Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 8)
+	     {
+	    	  finWeight = (finWeight * .112) + (finWeight * .112);
+	         finCost = finWeight * v7Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 8)
+	     {
+	         finWeight = (finWeight * .149) + (finWeight * .149);
+	         finCost = finWeight * v8Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 8) {
+	         finWeight = (finWeight * .187) + (finWeight * .187);
+	         finCost = finWeight * v9Output;
 
+	     }
+	     
+	      //number of rows equaling 9
+	      
+	     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 9)
+	     {
+	    	 finWeight = (finWeight * .039) + (finWeight * .049);
+	         finCost = finWeight * vOutput;
+	     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 9)
+	     {
+	     finWeight = (finWeight * .052) + (finWeight * .065);
+	         finCost = finWeight * v2Output;
+	     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 9) {
+	         
+	      finWeight = (finWeight * .065) + (finWeight * .081);
+	         finCost = finWeight * v3Output;
+	     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 9)
+	     {
+	    	 finWeight = (finWeight * .172) + (finWeight * .215);
+	         finCost = finWeight * v4Output;
+	     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 9)
+	     {
+	     finWeight = (finWeight * .215) + (finWeight * .269);
+	         finCost = finWeight * v5Output;
+	     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 9) {
+	         finWeight = (finWeight * .3023) + (finWeight * .378);
+	         finCost = finWeight * v6Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 9)
+	     {
+	    	  finWeight = (finWeight * .112) + (finWeight * .140);
+	         finCost = finWeight * v7Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 9)
+	     {
+	     finWeight = (finWeight * .149) + (finWeight * .187);
+	         finCost = finWeight * v8Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 9) {
+	         
+	         finWeight = (finWeight * .187) + (finWeight * .233);
+	         finCost = finWeight * v9Output;
+	     }
+	      
+	     //number of rows equaling 10
+	     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 10)
+	     {
+	    	finWeight = (finWeight * .039) + (finWeight * .058);
+	         finCost = finWeight * vOutput; 
+	     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 10)
+	     {
+	     finWeight = (finWeight * .052) + (finWeight * .078);
+	         finCost = finWeight * v2Output;
+	     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 10) {
+	         
+	      finWeight = (finWeight * .065) + (finWeight * .081);
+	         finCost = finWeight * v3Output;
+	     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 10)
+	     {
+	    	 finWeight = (finWeight * .172) + (finWeight * .258);
+	         finCost = finWeight * v4Output;
+	     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 10)
+	     {
+	     finWeight = (finWeight * .215) + (finWeight * .322);
+	         finCost = finWeight * v5Output;
+	     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 10) {
+	      finWeight = (finWeight * .3023) + (finWeight * .4515);
+	         finCost = finWeight * v6Output;   
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 10)
+	     {
+	    	  finWeight = (finWeight * .112) + (finWeight * .168);
+	         finCost = finWeight * v7Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 10)
+	     {
+	     finWeight = (finWeight * .149) + (finWeight * .224);
+	         finCost = finWeight * v8Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 10) {
+	         
+	         finWeight = (finWeight * .187) + (finWeight * .280);
+	         finCost = finWeight * v9Output;
+	     } 
+	     
+	     //number of rows equaling 11
+	     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 11)
+	     {
+	    	 finWeight = (finWeight * .039) + ((finWeight * .039) + (finWeight * .029));
+	         finCost = finWeight * vOutput;
+	     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 11)
+	     {
+	         finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .039));
+	         finCost = finWeight * v2Output;
+	     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 11) {
+	         finWeight = (finWeight * .065) + ((finWeight * .065) + (finWeight * .049));
+	         finCost = finWeight * v3Output;
+	      
+	     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 11)
+	     {
+	    	 finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .129));
+	         finCost = finWeight * v4Output;
+	     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 11)
+	     {
+	         finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .161));
+	         finCost = finWeight * v5Output;
+	     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 11) {
+	         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .2268));
+	         finCost = finWeight * v6Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 11)
+	     {
+	    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .084));
+	         finCost = finWeight * v7Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 11)
+	     {
+	     finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .112));
+	         finCost = finWeight * v8Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 11) {
+	         finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .140));
+	         finCost = finWeight * v9Output;
+	     }
+	     //number of rows equaling 12
+	     else if (finMaterial == FinMaterial.Aluminum_Six && rowNumber == 12)
+	     {
+	    	 finWeight = (finWeight * .039) + ((finWeight * .039) +  finWeight * .039);
+	         finCost = finWeight * vOutput;
+	     } else if (finMaterial == FinMaterial.Aluminum_Eight && rowNumber == 12)
+	     {
+	     finWeight = (finWeight * .052) + ((finWeight * .052) + (finWeight * .052));
+	         finCost = finWeight * v2Output;
+	     } else if (finMaterial == FinMaterial.Aluminum_Ten && rowNumber == 12) {
+	         
+	      finWeight = (finWeight * .065) + (finWeight * .129);
+	         finCost = finWeight * v3Output;
+	     } else if (finMaterial == FinMaterial.Copper_Eight && rowNumber == 12)
+	     {
+	    	finWeight = (finWeight * .172) + ((finWeight * .172) + (finWeight * .172));
+	         finCost = finWeight * v4Output;
+	     } else if (finMaterial == FinMaterial.Copper_Ten && rowNumber == 12)
+	     {
+	     finWeight = (finWeight * .215) + ((finWeight * .215) + (finWeight * .215));
+	         finCost = finWeight * v5Output;
+	     } else if (finMaterial == FinMaterial.Copper_Fifthteen && rowNumber == 12) {
+	         finWeight = (finWeight * .3023) + ((finWeight * .3023) + (finWeight * .3023));
+	         finCost = finWeight * v6Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Six && rowNumber == 12)
+	     {
+	    	 finWeight = (finWeight * .112) + ((finWeight * .112) + (finWeight * .112));
+	         finCost = finWeight * v7Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Eight && rowNumber == 12)
+	     {
+	       finWeight = (finWeight * .149) + ((finWeight * .149) + (finWeight * .149));
+	         finCost = finWeight * v8Output;
+	     } else if (finMaterial == FinMaterial.Stainless_Steel_Ten && rowNumber == 12) {
+	        finWeight = (finWeight * .187) + ((finWeight * .187) + (finWeight * .187));
+	         finCost = finWeight * v9Output; 
+	         
+	     } 
       
         //prints out the value of Fin Weight
        
